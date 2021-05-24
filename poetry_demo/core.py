@@ -7,4 +7,4 @@ def get_pulsifi_tech_team():
 
 
 def return_a():
-    return "a"
+    return "b"
