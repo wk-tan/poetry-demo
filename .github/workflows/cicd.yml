@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build-and-test:
+  BuildAndTest:
     runs-on: ubuntu-latest
     steps:
       - name: "Checks-out GitHub Repository"
@@ -29,8 +29,12 @@ jobs:
         run: |
           python -m poetry install
 
-  release:
-    needs: build-and-test
+      - name: "Test with pytest"
+        run: |
+          python -m poetry run python -m pytest -v tests
+
+  Release:
+    needs: BuildAndTest
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'chore(release):')
     runs-on: ubuntu-latest
     steps:
