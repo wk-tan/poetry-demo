@@ -12,3 +12,7 @@ def return_a():
 
 def get_hanjeahwan_dick_length():
     return 15
+
+
+def get_hanjeahwan_height():
+    return 180
