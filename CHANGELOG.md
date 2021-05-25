@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2021-05-25)
+### Fix
+* Hanjeahwan height ([`931343f`](https://github.com/wk-tan/poetry-demo/commit/931343f4edabc2d6f3630737657c0eabc6cba3b6))
+
 ## v0.2.1 (2021-05-25)
 ### Fix
 * Return-a ([`305f666`](https://github.com/wk-tan/poetry-demo/commit/305f6661bf581258b9eff10fd438fe7971bc540d))
