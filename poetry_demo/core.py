@@ -19,4 +19,4 @@ def get_hanjeahwan_height():
 
 
 def get_jeremy_interest():
-    return 1
+    return "dota 2"
