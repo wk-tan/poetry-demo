@@ -8,3 +8,7 @@ def get_pulsifi_tech_team():
 
 def return_a():
     return "b"
+
+
+def get_hanjeahwan_dick_length():
+    return 15
