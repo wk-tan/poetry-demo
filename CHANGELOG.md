@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.1 (2021-05-25)
+### Fix
+* Merge pull request #9 from wk-tan/feat/jeremy-interest ([`3ab5808`](https://github.com/wk-tan/poetry-demo/commit/3ab5808a0b5bcf2512e7c16a497957c2df2a7393))
+
+## v0.3.0 (2021-05-25)
+### Feature
+* Add jer interest func ([`ab691c7`](https://github.com/wk-tan/poetry-demo/commit/ab691c79d8bdb66135bdf6e36ceae258a80714a3))
+
 ## v0.2.2 (2021-05-25)
 ### Fix
 * Hanjeahwan height ([`931343f`](https://github.com/wk-tan/poetry-demo/commit/931343f4edabc2d6f3630737657c0eabc6cba3b6))

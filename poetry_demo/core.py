@@ -16,3 +16,7 @@ def get_hanjeahwan_dick_length():
 
 def get_hanjeahwan_height():
     return 200
+
+
+def get_jeremy_interest():
+    return "dota 2"
