@@ -40,6 +40,8 @@ jobs:
     steps:
       - name: "Checks-out GitHub Repository"
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ADMIN_GITHUB_PAT }}
 
       - name: "Setup Python 3.8"
         uses: actions/setup-python@v2
@@ -47,10 +49,8 @@ jobs:
           python-version: 3.8
 
       - name: "Semantic Release"
-        env:
-          ADMIN_TOKEN: ${{ secrets.ADMIN_GITHUB_PAT }}
         run: |
           pip install python-semantic-release
           git config user.name github-actions
           git config user.email github-actions@github.com
-          GH_TOKEN="$ADMIN_TOKEN" semantic-release publish --verbosity=DEBUG
+          semantic-release publish --verbosity=DEBUG
