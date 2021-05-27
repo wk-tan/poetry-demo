@@ -20,3 +20,7 @@ def get_hanjeahwan_height():
 
 def get_jeremy_interest():
     return "dota 2"
+
+
+def i_dont_know():
+    return "I dont know what the hell is going on"
