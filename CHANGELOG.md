@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.2 (2021-05-27)
+### Fix
+* Ci ([`11ca9b6`](https://github.com/wk-tan/poetry-demo/commit/11ca9b611c0f9928f6aa82cf3d3efb5cf8e6ab54))
+
 ## v0.3.1 (2021-05-25)
 ### Fix
 * Merge pull request #9 from wk-tan/feat/jeremy-interest ([`3ab5808`](https://github.com/wk-tan/poetry-demo/commit/3ab5808a0b5bcf2512e7c16a497957c2df2a7393))
