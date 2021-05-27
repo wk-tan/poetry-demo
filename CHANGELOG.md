@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2021-05-27)
+### Feature
+* Add i-dont-know func ([#12](https://github.com/wk-tan/poetry-demo/issues/12)) ([`4fc549f`](https://github.com/wk-tan/poetry-demo/commit/4fc549f4640adf1922f03a728fc0942a41e430ed))
+
 ## v0.3.2 (2021-05-27)
 ### Fix
 * Ci ([`11ca9b6`](https://github.com/wk-tan/poetry-demo/commit/11ca9b611c0f9928f6aa82cf3d3efb5cf8e6ab54))
