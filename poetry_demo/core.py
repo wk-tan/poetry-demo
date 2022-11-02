@@ -24,7 +24,3 @@ def get_jeremy_interest():
 
 def i_dont_know():
     return "I dont know what the hell is going on"
-
-
-def i_know():
-    return "I know what the hell is going on"
