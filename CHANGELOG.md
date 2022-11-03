@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2022-11-03)
+### Feature
+* Handsome feature ([#21](https://github.com/wk-tan/poetry-demo/issues/21)) ([`d027512`](https://github.com/wk-tan/poetry-demo/commit/d02751279acf775d271c7d0f984f4140304ff59f))
+* Handsome feature ([#20](https://github.com/wk-tan/poetry-demo/issues/20)) ([`a74768a`](https://github.com/wk-tan/poetry-demo/commit/a74768a30679915b9244197c757f26bc3845ee02))
+
 ## v0.4.0 (2021-05-27)
 ### Feature
 * Add i-dont-know func ([#12](https://github.com/wk-tan/poetry-demo/issues/12)) ([`4fc549f`](https://github.com/wk-tan/poetry-demo/commit/4fc549f4640adf1922f03a728fc0942a41e430ed))
