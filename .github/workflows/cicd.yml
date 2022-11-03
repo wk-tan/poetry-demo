@@ -1,4 +1,4 @@
-name: CICD
+name: Semantic Release
 
 on:
   push:
@@ -7,27 +7,30 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
-      - name: "Checks-out GitHub Repository"
-        uses: actions/checkout@v2
+      - name: "Check out GitHub repository"
+        uses: actions/checkout@v3
 
-      - name: "Setup Python 3.8"
-        uses: actions/setup-python@v2
+      - name: "Set up Python 3.9"
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: 3.9
 
-      - name: "Setup Poetry"
+      - name: "Set up Poetry"
         uses: abatilo/actions-poetry@v2.1.0
         with:
-          poetry-version: 1.1.5
+          poetry-version: 1.2.2
 
-      - name: "Configure poetry"
+      - name: "Configure Poetry"
         run: |
-          python -m poetry config virtualenvs.in-project true
+          poetry config virtualenvs.in-project true
 
       - name: "Install dependencies"
         run: |
-          python -m poetry install
+          poetry install --with dev
 
       # - name: "Test with pytest"
       #   run: |
@@ -35,22 +38,37 @@ jobs:
 
   release:
     needs: build-and-test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
     runs-on: ubuntu-latest
     steps:
-      - name: "Checks-out GitHub Repository"
-        uses: actions/checkout@v2
+      - name: "Check out GitHub repository"
+        uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           token: ${{ secrets.ADMIN_GITHUB_PAT }}
 
-      - name: "Setup Python 3.8"
-        uses: actions/setup-python@v2
+      - name: "Set up Python 3.9"
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: 3.9
+
+      - name: "Set up Poetry"
+        uses: abatilo/actions-poetry@v2.1.0
+        with:
+          poetry-version: 1.2.2
+
+      - name: "Configure Poetry"
+        run: |
+          poetry config virtualenvs.in-project true
+
+      - name: "Install dev dependencies"
+        run: |
+          poetry install --only dev
 
       - name: "Semantic Release"
         run: |
-          pip install python-semantic-release
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           semantic-release publish --verbosity=DEBUG
+        env:
+          GH_TOKEN: ${{ secrets.ADMIN_GITHUB_PAT }}
