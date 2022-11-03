@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.1 (2022-11-03)
+### Fix
+* Remove people's info ([#22](https://github.com/wk-tan/poetry-demo/issues/22)) ([`4c188de`](https://github.com/wk-tan/poetry-demo/commit/4c188de0fc1da478339a42bcf0dea220f6a11fd7))
+
 ## v0.5.0 (2022-11-03)
 ### Feature
 * Handsome feature ([#21](https://github.com/wk-tan/poetry-demo/issues/21)) ([`d027512`](https://github.com/wk-tan/poetry-demo/commit/d02751279acf775d271c7d0f984f4140304ff59f))
