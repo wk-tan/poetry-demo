@@ -1,11 +1,10 @@
-name: Semantic Release
+name: Release
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  build-and-test:
+  unittest:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -36,9 +35,8 @@ jobs:
       #   run: |
       #     python -m poetry run python -m pytest -v tests
 
-  release:
-    needs: build-and-test
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
+  semantic-release:
+    needs: unittest
     runs-on: ubuntu-latest
     steps:
       - name: "Check out GitHub repository"
@@ -65,10 +63,22 @@ jobs:
         run: |
           poetry install --only dev
 
-      - name: "Semantic Release"
+      - name: "Semantic release"
+        env:
+          GH_TOKEN: ${{ secrets.ADMIN_GITHUB_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           poetry run semantic-release publish --verbosity=DEBUG
-        env:
-          GH_TOKEN: ${{ secrets.ADMIN_GITHUB_PAT }}
+
+  build-and-deploy:
+    needs: [unittest, semantic-release]
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: "Get release tag"
+        id: get_release_tag
+        run: |
+          echo "RELEASE TAG $(toml get pyproject.toml tool.poetry.version)"

@@ -10,6 +10,10 @@ def return_a():
     return "a"
 
 
+def return_b():
+    return "b"
+
+
 def i_dont_know():
     return "I dont know what the hell is going on"
 
