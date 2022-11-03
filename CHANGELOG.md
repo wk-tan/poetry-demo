@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.1 (2022-11-03)
+### Fix
+* Remove func a ([`59bac79`](https://github.com/wk-tan/poetry-demo/commit/59bac799b06f992bdf50fc17b1b62fdf92a8c841))
+
 ## v0.7.0 (2022-11-03)
 ### Feature
 * Add a func c ([`1c37118`](https://github.com/wk-tan/poetry-demo/commit/1c37118554817834669ef40993ac50c44ba518ad))
