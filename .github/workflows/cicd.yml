@@ -78,7 +78,20 @@ jobs:
       id-token: write
       contents: read
     steps:
+      - name: "Check out GitHub repository"
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: "Set up Python 3.9"
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: "Install toml-cli"
+        run: pip install toml-cli
+
       - name: "Get release tag"
         id: get_release_tag
         run: |
-          echo "RELEASE TAG $(toml get pyproject.toml tool.poetry.version)"
+          echo "RELEASE TAG $(toml get --toml-path pyproject.toml tool.poetry.version)"
