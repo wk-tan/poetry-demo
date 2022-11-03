@@ -10,18 +10,6 @@ def return_a():
     return "a"
 
 
-def get_hanjeahwan_dick_length():
-    return 15
-
-
-def get_hanjeahwan_height():
-    return 200
-
-
-def get_jeremy_interest():
-    return "dota 2"
-
-
 def i_dont_know():
     return "I dont know what the hell is going on"
 
