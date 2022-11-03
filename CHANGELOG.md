@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2022-11-03)
+### Feature
+* Add a func c ([`1c37118`](https://github.com/wk-tan/poetry-demo/commit/1c37118554817834669ef40993ac50c44ba518ad))
+
 ## v0.6.0 (2022-11-03)
 ### Feature
 * Add get_b func ([`0622341`](https://github.com/wk-tan/poetry-demo/commit/0622341d5a08e7279056ea6ab19150c6aee08441))
