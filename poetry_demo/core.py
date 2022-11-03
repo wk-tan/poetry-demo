@@ -6,10 +6,6 @@ def get_pulsifi_tech_team():
     return ["data-team", "app-team", "product-team", "stackholder-team"]
 
 
-def return_b():
-    return "b"
-
-
 def return_c():
     return "c"
 

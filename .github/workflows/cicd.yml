@@ -73,8 +73,8 @@ jobs:
           git config --global user.email "github-actions@github.com"
           poetry run semantic-release publish --verbosity=DEBUG
 
-          echo "RELEASED_VERSION $(poetry run semantic-release print-version)"
-          echo "::set-output name=RELEASED_VERSION::$(poetry run semantic-release print-version)"
+          echo "RELEASED_VERSION $(poetry run semantic-release print-version --current)"
+          echo "RELEASED_VERSION=$(poetry run semantic-release print-version --current)" >> $GITHUB_OUTPUT
 
   build-and-deploy:
     needs: [unittest, semantic-release]
