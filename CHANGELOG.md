@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2022-11-03)
+### Feature
+* Add get_b func ([`0622341`](https://github.com/wk-tan/poetry-demo/commit/0622341d5a08e7279056ea6ab19150c6aee08441))
+
 ## v0.5.1 (2022-11-03)
 ### Fix
 * Remove people's info ([#22](https://github.com/wk-tan/poetry-demo/issues/22)) ([`4c188de`](https://github.com/wk-tan/poetry-demo/commit/4c188de0fc1da478339a42bcf0dea220f6a11fd7))
