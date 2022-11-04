@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.8.1 (2022-11-04)
+### Fix
+* Add include-package ([`2b5dfb5`](https://github.com/wk-tan/poetry-demo/commit/2b5dfb5a7d5798bb802f02e729a1182922cc89d7))
+
 ## v0.8.0 (2022-11-04)
 ### Feature
 * Update again ([`884a990`](https://github.com/wk-tan/poetry-demo/commit/884a9906b80911382291013f770b218253f80aa2))
