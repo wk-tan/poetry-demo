@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.8.0 (2022-11-04)
+### Feature
+* Update again ([`884a990`](https://github.com/wk-tan/poetry-demo/commit/884a9906b80911382291013f770b218253f80aa2))
+* Split function ([`cb9a4b7`](https://github.com/wk-tan/poetry-demo/commit/cb9a4b74d79cd58b1d0679fa5f462100fa24a18d))
+
 ## v0.7.3 (2022-11-03)
 ### Fix
 * Remove func c ([`f26542c`](https://github.com/wk-tan/poetry-demo/commit/f26542c56b8e734959e3528ecf3cbe452b68af85))
